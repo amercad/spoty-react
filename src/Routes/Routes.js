@@ -1,5 +1,6 @@
 import { Routes, Route } from "react-router-dom";
-import { Menu } from '../Menu/Menu'
+import { Menu } from '../Menu/Menu';
+import { Footer } from '../Footer/Footer';
 
 import { Home } from '../Home/Home.js';
 import { Historia } from '../Historia/Historia.js';
@@ -16,6 +17,7 @@ export const Rutas = () => {
             <Route path="integrantes" element={<Integrantes />} />
             <Route path="music" element={<Music />} />
           </Routes>
+          <Footer />
         </div>
       );
 }
