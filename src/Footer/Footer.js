@@ -7,17 +7,17 @@ export const Footer = () => {
                     <div className="col-12 col-md-6">
                         <img src="https://firebasestorage.googleapis.com/v0/b/cineamr-5042b.appspot.com/o/spotify%2Ffondo-footer.webp?alt=media&token=2a56e206-4d05-4368-8fa9-28cb7bc1ea5a" alt="Logo footer" className="img-fluid w-100 img-size" />
                     </div>
-                    <div className="col-12 col-md-6 text-white align-self-center ps-5">
+                    <div className="col-12 col-md-6 text-white text-center align-self-center ps-5 justify-content-center">
                         <h3>Abba</h3>
-                        <ul>
+                        <ul className='d-flex justify-content-center'>
                             <li>
-                                <i class="me-3 fa-brands fa-instagram"></i>
+                                <i className="me-3 fa-brands fa-instagram"></i>
                             </li>
                             <li>
-                                <i class="me-3 fa-brands fa-instagram"></i>
+                                <i className="me-3 fa-brands fa-instagram"></i>
                             </li>
                             <li>
-                                <i class="me-3 fa-brands fa-instagram"></i>
+                                <i className="me-3 fa-brands fa-instagram"></i>
                             </li>
                         </ul>
                         <p>

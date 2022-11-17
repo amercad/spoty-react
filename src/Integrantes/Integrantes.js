@@ -1,3 +1,5 @@
+import './Integrantes.css';
+
 export const Integrantes = () => {
 
     const integrantes = [
@@ -32,19 +34,21 @@ export const Integrantes = () => {
     return (
         <>
 
-            <div className="row row-cols-1 row-cols-2 g-0 mt-5">
+            <div className="row row-cols-1 row-cols-4 g-0 mt-5">
                     
                {
                     integrantes.map(integrante => (
                         <>
-                            <div key={ integrante.nombre } className="col mt-3 p-5">
-                                <div className="card h-100">
-                                    <img src={ integrante.foto } alt={ integrante.nombre } className="img-fluid w-100" />
+                            <div key={ integrante.nombre } className="col mt-3 p-5 bg-dark css-card">
+                                <div className="card h-100 text-center">
+                                    <img src={ integrante.foto } alt={ integrante.nombre } className="img-fluid w-100 img-card" />
                                     
-                                    <h3 className="text-center fw-bold mt-3">{ integrante.nombre }</h3>
-                                    <br/>
-                                    <p className="px-5">Edad: { integrante.edad }</p>
-                                    <p className="px-5">Rol: { integrante.rol }</p>
+                                    <div className='card-body-css'>
+                                        <h3 className="text-center fw-bold mt-3">{ integrante.nombre }</h3>
+                                        <br/>
+                                        <p className="px-5">Edad: { integrante.edad }</p>
+                                        <p className="px-5">Rol: { integrante.rol }</p>
+                                    </div>
                                 </div>
                             </div>
                         </>
