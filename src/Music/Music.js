@@ -16,22 +16,31 @@ export const Music = () => {
     
     console.log(canciones);
             
-    return (
-        <>
-            { isLoading && <h3>Cargando...</h3> }
+           
+        if (isLoading) {
             
-            {
-                canciones.map(cancion => 
-                (
-                    <>
-                    <h5>{ cancion.name }</h5>
-                    <p>{ cancion.preview_url }</p>
-                    </>
-                )
-                   
-            
-                )
-            }
-        </>
-    )
+            return (<h3>Cargando...</h3>)
+        
+        } else {
+        
+            return (
+                <>
+                    <div className='container'>
+                        <h1 className='mt-3 text-center'>Estan listas las canciones</h1>
+                        <div className='row'>
+                            {
+                                canciones.map(cancion => (
+                                    <div className='mt-5 col-12 col-md-4' key={ cancion.id }>
+                                            <p key={ cancion.name }>{cancion.name}</p>
+                                            <img key={ cancion.album.images[1].url } src={cancion.album.images[1].url} alt={cancion.name} className='img-fluid d-block' />
+                                            <audio src={ cancion.preview_url } controls='controls'></audio>
+                                    </div>
+                                ))
+                            }
+                        </div>
+                    </div>
+                </>    
+            )
+
+        }
 }
